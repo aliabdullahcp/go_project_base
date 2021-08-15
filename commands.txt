@@ -1,0 +1,6 @@
+docker build -t go-docker-image .
+docker run -p 8000:8000 go-docker-image
+
+# For hot reloading
+docker run -v ~/Desktop/go/src/go_project_base/volumes:/app -p 8000:8000 go-docker-image
+docker run -t -i -v ~/Desktop/go/src/go_project_base:/app -p 8000:8000 go-docker-image
